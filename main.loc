@@ -1,0 +1,68 @@
+module base
+
+import cppbase
+ (  Map
+ ,  Num
+ ,  Int
+ ,  Str
+ ,  Bool
+ ,  id
+ ,  enumerateWith
+ ,  fold
+ ,  map
+ ,  zipWith
+ ,  add
+ ,  sub
+ ,  mul
+ ,  div
+ ,  mod
+ ,  zip
+ ,  unzip
+ ,  keys
+ ,  vals
+ ,  filter_key
+ ,  filter_val
+ ,  map_key
+ ,  map_val
+ ,  with_keys
+ ,  with_vals
+ )
+
+import rbase
+ (  Map
+ ,  id
+ ,  enumerateWith
+ ,  fold
+ ,  map
+ ,  zipWith
+ ,  add
+ ,  sub
+ ,  mul
+ ,  div
+ )
+
+export Map
+export Num
+export Int
+export Str
+export Bool
+export id
+export enumerateWith
+export fold
+export map
+export zipWith
+export add
+export sub
+export mul
+export div
+export mod
+export zip
+export unzip
+export keys
+export vals
+export filter_key
+export filter_val
+export map_key
+export map_val
+export with_keys
+export with_vals
