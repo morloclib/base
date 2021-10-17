@@ -41,6 +41,18 @@ import rbase
  ,  div
  )
 
+import pybase
+ ( Map
+ , id
+ , enumerateWith
+ , fold
+ , zipWith
+ , add
+ , sub
+ , mul
+ , div
+ )
+
 export Map
 export Num
 export Int
