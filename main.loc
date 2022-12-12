@@ -1,8 +1,97 @@
 module base
 
+import conventions
+ ( id
+-- tuple functions
+ , fst
+ , snd
+ , tuple
+ , couple
+ , with_sec
+ , with_fst
+ , curry
+ , uncurry
+-- pairlists
+ , zip
+ , unzip
+ , keys
+ , vals
+-- functions over pairlists
+ , filter_key
+ , filter_val
+ , map_key
+ , map_val
+ , with_keys
+ , with_vals
+-- context filtering
+ , context_filter_key
+ , context_filter_val
+-- functional tools
+ , flip
+ , until
+-- foldable functions - replace once I get typeclasses working
+ , length
+ , reverse
+ , concat
+ , concatMap
+-- list creation
+ , replicate
+-- general list processing
+ , head
+ , last
+ , tail
+ , init
+ , get
+ , take
+ , drop
+ , takeWhile
+ , dropWhile
+ , span
+ , break
+ , splitAt
+-- string processing
+ , lines
+ , words
+ , unlines
+ , unwords
+-- accumulating folds
+ , scanl
+ , scanr
+ , scanl1
+ , scanr1
+-- arithmetic operators - these are all
+-- add :: (Num a) => a -> a -> a
+ , add
+-- sub :: (Num a) => a -> a -> a
+ , sub
+-- mul :: (Num a) => a -> a -> a
+ , mul
+-- div :: (Num a) => a -> a -> a
+ , div
+-- mod :: (Num a) => a -> a -> a
+ , div
+-- hofs
+ , map
+ , zipWith
+ , fold
+ , enumerateWith
+-- pairlists
+ , zip
+ , unzip
+ , keys
+ , vals
+-- functions over pairlists
+ , filter_key
+ , filter_val
+ , map_key
+ , map_val
+ , with_keys
+ , with_vals
+ )
+
 import cppbase
  (  Map
- ,  Num
+ ,  Real
  ,  Int
  ,  Str
  ,  Bool
