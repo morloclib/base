@@ -7,8 +7,8 @@ import conventions
  , snd
  , tuple
  , couple
- , with_sec
- , with_fst
+ , withSec
+ , withFst
  , curry
  , uncurry
 -- pairlists
@@ -17,15 +17,15 @@ import conventions
  , keys
  , vals
 -- functions over pairlists
- , filter_key
- , filter_val
- , map_key
- , map_val
- , with_keys
- , with_vals
+ , filterKey
+ , filterVal
+ , mapKey
+ , mapVal
+ , withKeys
+ , withVals
 -- context filtering
- , context_filter_key
- , context_filter_val
+ , contextFilterKey
+ , contextFilterVal
 -- functional tools
  , flip
  , until
@@ -81,12 +81,12 @@ import conventions
  , keys
  , vals
 -- functions over pairlists
- , filter_key
- , filter_val
- , map_key
- , map_val
- , with_keys
- , with_vals
+ , filterKey
+ , filterVal
+ , mapKey
+ , mapVal
+ , withKeys
+ , withVals
  )
 
 import cppbase
@@ -109,12 +109,12 @@ import cppbase
  ,  unzip
  ,  keys
  ,  vals
- ,  filter_key
- ,  filter_val
- ,  map_key
- ,  map_val
- ,  with_keys
- ,  with_vals
+ ,  filterKey
+ ,  filterVal
+ ,  mapKey
+ ,  mapVal
+ ,  withKeys
+ ,  withVals
  )
 
 import rbase
@@ -161,9 +161,9 @@ export zip
 export unzip
 export keys
 export vals
-export filter_key
-export filter_val
-export map_key
-export map_val
-export with_keys
-export with_vals
+export filterKey
+export filterVal
+export mapKey
+export mapVal
+export withKeys
+export withVals
