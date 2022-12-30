@@ -6,11 +6,12 @@ import conventions
  , fst
  , snd
  , tuple
- , couple
- , withSec
- , withFst
+ , mapSnd
+ , mapFst
  , curry
  , uncurry
+-- list operations
+ , at
 -- pairlists
  , zip
  , unzip
@@ -100,6 +101,7 @@ import cppbase
  ,  fold
  ,  map
  ,  zipWith
+ ,  at
  ,  add
  ,  sub
  ,  mul
@@ -119,7 +121,12 @@ import cppbase
 
 import rbase
  (  Map
+ ,  Real
+ ,  Int
+ ,  Str
+ ,  Bool
  ,  id
+ ,  at
  ,  enumerateWith
  ,  fold
  ,  map
@@ -132,9 +139,15 @@ import rbase
 
 import pybase
  ( Map
+ , Real
+ , Int
+ , Str
+ , Bool
  , id
+ , at
  , enumerateWith
  , fold
+ , map
  , zipWith
  , add
  , sub
@@ -143,11 +156,12 @@ import pybase
  )
 
 export Map
-export Num
+export Real
 export Int
 export Str
 export Bool
 export id
+export at
 export enumerateWith
 export fold
 export map
