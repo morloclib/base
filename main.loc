@@ -1,122 +1,154 @@
 module base
 
+export Bool
+export Int
+export Map
+export Real
+export Str
+export add
+export at
+export div
+export elem
+export enumerateWith
+export eq
+export filterKey
+export filterVal
+export fold
+export fst
+export gt
+export head
+export id
+export ifelse
+export join
+export keys
+export length
+export lookup
+export map
+export mapKey
+export mapVal
+export mod
+export mul
+export onFst
+export readMap
+export shard
+export sleep
+export snd
+export sub
+export unique
+export unzip
+export vals
+export withKeys
+export withVals
+export zip
+export zipWith
+
+-- really need `import *`
+-- also need namespaces and qualified imports
 import conventions
- ( id
--- tuple functions
- , fst
- , snd
- , tuple
- , mapSnd
- , mapFst
- , curry
- , uncurry
--- list operations
+ ( add
  , at
--- pairlists
- , zip
- , unzip
- , keys
- , vals
--- functions over pairlists
- , filterKey
- , filterVal
- , mapKey
- , mapVal
- , withKeys
- , withVals
--- context filtering
- , contextFilterKey
- , contextFilterVal
--- functional tools
- , flip
- , until
--- foldable functions - replace once I get typeclasses working
- , length
- , reverse
+ , break
  , concat
  , concatMap
--- list creation
- , replicate
--- general list processing
- , head
- , last
- , tail
- , init
- , get
- , take
+ , contextFilterKey
+ , contextFilterVal
+ , curry
+ , div
  , drop
- , takeWhile
  , dropWhile
- , span
- , break
- , splitAt
--- string processing
- , lines
- , words
- , unlines
- , unwords
--- accumulating folds
- , scanl
- , scanr
- , scanl1
- , scanr1
--- arithmetic operators - these are all
--- add :: (Num a) => a -> a -> a
- , add
--- sub :: (Num a) => a -> a -> a
- , sub
--- mul :: (Num a) => a -> a -> a
- , mul
--- div :: (Num a) => a -> a -> a
- , div
--- mod :: (Num a) => a -> a -> a
- , div
--- hofs
- , map
- , zipWith
- , fold
+ , elem
  , enumerateWith
--- pairlists
- , zip
- , unzip
- , keys
- , vals
--- functions over pairlists
+ , eq
  , filterKey
  , filterVal
+ , flip
+ , fold
+ , fst
+ , get
+ , gt
+ , head
+ , id
+ , ifelse
+ , init
+ , join
+ , keys
+ , last
+ , length
+ , lines
+ , lookup
+ , map
+ , mapFst
  , mapKey
  , mapVal
+ , mod
+ , mul
+ , onFst
+ , onSnd
+ , readMap
+ , replicate
+ , reverse
+ , scanl
+ , scanl1
+ , scanr
+ , scanr1
+ , shard
+ , sleep
+ , snd
+ , span
+ , splitAt
+ , sub
+ , tail
+ , take
+ , takeWhile
+ , tuple
+ , uncurry
+ , unique
+ , unlines
+ , until
+ , unwords
+ , unzip
+ , vals
  , withKeys
  , withVals
+ , words
+ , zip
+ , zipWith
  )
 
 import cppbase
- (  Map
- ,  Real
- ,  Int
- ,  Str
- ,  Bool
- ,  id
- ,  enumerateWith
- ,  fold
- ,  map
- ,  zipWith
- ,  at
- ,  add
- ,  sub
- ,  mul
- ,  div
- ,  mod
- ,  zip
- ,  unzip
- ,  keys
- ,  vals
- ,  filterKey
- ,  filterVal
- ,  mapKey
- ,  mapVal
- ,  withKeys
- ,  withVals
+ ( Bool
+ , Int
+ , Map
+ , Real
+ , Str
+ , add
+ , at
+ , div
+ , enumerateWith
+ , eq
+ , filter
+ , filterKey
+ , filterVal
+ , fold
+ , gt
+ , head
+ , id
+ , ifelse
+ , keys
+ , length
+ , map
+ , mapKey
+ , mapVal
+ , mod
+ , mul
+ , sub
+ , unique
+ , unzip
+ , vals
+ , withKeys
+ , withVals
+ , zip
+ , zipWith
  )
 
 import rbase
@@ -138,46 +170,24 @@ import rbase
  )
 
 import pybase
- ( Map
- , Real
+ ( Bool
  , Int
+ , Map
+ , Real
  , Str
- , Bool
- , id
+ , add
  , at
+ , concat
+ , div
  , enumerateWith
  , fold
+ , id
+ , join
  , map
- , zipWith
- , add
- , sub
  , mul
- , div
+ , onFst
+ , shard
+ , sleep
+ , sub
+ , zipWith
  )
-
-export Map
-export Real
-export Int
-export Str
-export Bool
-export id
-export at
-export enumerateWith
-export fold
-export map
-export zipWith
-export add
-export sub
-export mul
-export div
-export mod
-export zip
-export unzip
-export keys
-export vals
-export filterKey
-export filterVal
-export mapKey
-export mapVal
-export withKeys
-export withVals
