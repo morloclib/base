@@ -1,46 +1,4 @@
-module base
-
-export Bool
-export Int
-export Map
-export Real
-export Str
-export add
-export at
-export div
-export elem
-export enumerateWith
-export eq
-export filterKey
-export filterVal
-export fold
-export fst
-export gt
-export head
-export id
-export ifelse
-export join
-export keys
-export length
-export lookup
-export map
-export mapKey
-export mapVal
-export mod
-export mul
-export onFst
-export readMap
-export shard
-export sleep
-export snd
-export sub
-export unique
-export unzip
-export vals
-export withKeys
-export withVals
-export zip
-export zipWith
+module base (*)
 
 -- really need `import *`
 -- also need namespaces and qualified imports
@@ -74,10 +32,10 @@ import conventions
  , keys
  , last
  , length
+ , lengthS
  , lines
  , lookup
  , map
- , mapFst
  , mapKey
  , mapVal
  , mod
@@ -108,8 +66,8 @@ import conventions
  , unwords
  , unzip
  , vals
- , withKeys
- , withVals
+ , withFsts
+ , withSnds
  , words
  , zip
  , zipWith
@@ -136,6 +94,7 @@ import cppbase
  , ifelse
  , keys
  , length
+ , lengthS
  , map
  , mapKey
  , mapVal
@@ -145,28 +104,28 @@ import cppbase
  , unique
  , unzip
  , vals
- , withKeys
- , withVals
  , zip
  , zipWith
  )
 
 import rbase
- (  Map
- ,  Real
- ,  Int
- ,  Str
- ,  Bool
- ,  id
- ,  at
- ,  enumerateWith
- ,  fold
- ,  map
- ,  zipWith
- ,  add
- ,  sub
- ,  mul
- ,  div
+ ( Map
+ , Real
+ , Int
+ , Str
+ , Bool
+ , id
+ , at
+ , enumerateWith
+ , fold
+ , map
+ , zipWith
+ , add
+ , sub
+ , mul
+ , div
+ , length
+ , lengthS
  )
 
 import pybase
@@ -190,4 +149,10 @@ import pybase
  , sleep
  , sub
  , zipWith
+ , length
+ , lengthS
  )
+
+
+withFsts f xs = zip (f (map fst xs)) (map snd xs)
+withSnds f xs = zip (map fst xs) (f (map snd xs))
