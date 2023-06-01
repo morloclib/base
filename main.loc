@@ -3,82 +3,21 @@ module base (*)
 -- really need `import *`
 -- also need namespaces and qualified imports
 import conventions
- ( add
- , at
- , break
- , concat
- , concatMap
- , contextFilterKey
- , contextFilterVal
- , curry
- , div
- , drop
- , dropWhile
- , elem
- , enumerateWith
- , eq
- , filterKey
- , filterVal
- , flip
- , fold
- , fst
- , get
- , gt
- , head
- , id
- , ifelse
- , init
- , join
- , keys
- , last
- , length
- , lengthS
- , lines
- , lookup
- , map
- , mapKey
- , mapVal
- , mod
- , mul
- , onFst
- , onSnd
- , readMap
- , replicate
- , reverse
- , scanl
- , scanl1
- , scanr
- , scanr1
- , shard
- , sleep
- , snd
- , span
- , splitAt
- , sub
- , tail
- , take
- , takeWhile
- , tuple
- , uncurry
- , unique
- , unlines
- , until
- , unwords
- , unzip
- , vals
- , withFsts
- , withSnds
- , words
- , zip
- , zipWith
+ ( Real
+ , Int
+ , Str
+ , Bool
+ , Unit
+ , List
+ , Map
+ , Tuple2
+ , Tuple3
+ , Tuple4
+ , Tuple5
  )
 
 import cppbase
- ( Bool
- , Int
- , Map
- , Real
- , Str
+ ( run
  , add
  , at
  , div
@@ -88,7 +27,11 @@ import cppbase
  , filterKey
  , filterVal
  , fold
- , gt
+ , fst
+ , snd
+ , fst3
+ , snd3
+ , thr3
  , head
  , id
  , ifelse
@@ -106,14 +49,23 @@ import cppbase
  , vals
  , zip
  , zipWith
+ -- combinators
+ , seq
+ , const
+ -- logical
+ , gt
+ , lt
+ , ge
+ , le
+ , eq
+ , ne
+ , not
+ , and
+ , or
  )
 
 import rbase
- ( Map
- , Real
- , Int
- , Str
- , Bool
+ ( run
  , id
  , at
  , enumerateWith
@@ -126,14 +78,29 @@ import rbase
  , div
  , length
  , lengthS
+ , fst
+ , snd
+ , fst3
+ , snd3
+ , thr3
+ , elem
+ -- combinators
+ , seq
+ , const
+ -- logical
+ , gt
+ , lt
+ , ge
+ , le
+ , eq
+ , ne
+ , not
+ , and
+ , or
  )
 
 import pybase
- ( Bool
- , Int
- , Map
- , Real
- , Str
+ ( run
  , add
  , at
  , concat
@@ -151,8 +118,27 @@ import pybase
  , zipWith
  , length
  , lengthS
+ , readMap
+ , fst
+ , snd
+ , fst3
+ , snd3
+ , thr3
+ , elem
+ -- combinators
+ , seq
+ , const
+ -- logical
+ , gt
+ , lt
+ , ge
+ , le
+ , eq
+ , ne
+ , not
+ , and
+ , or
  )
-
 
 withFsts f xs = zip (f (map fst xs)) (map snd xs)
 withSnds f xs = zip (map fst xs) (f (map snd xs))
