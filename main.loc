@@ -41,6 +41,7 @@ import cppbase
  , map
  , mapKey
  , mapVal
+ , join
  , mod
  , mul
  , sub
@@ -72,6 +73,7 @@ import rbase
  , fold
  , map
  , zipWith
+ , join
  , add
  , sub
  , mul
