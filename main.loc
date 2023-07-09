@@ -117,6 +117,10 @@ import pybase
  , shard
  , sleep
  , sub
+ , keys
+ , vals
+ , filterKey
+ , filterVal
  , zipWith
  , length
  , lengthS
