@@ -19,6 +19,7 @@ import conventions
 import cppbase
  ( run
  , add
+ , append
  , at
  , div
  , enumerateWith
@@ -32,7 +33,12 @@ import cppbase
  , fst3
  , snd3
  , thr3
- , head
+ , head -- [a] -> a
+ , tail -- [a]_{n} -> [a]_{n-1}
+ , last -- [a] -> a
+ , take -- i:Int -> [a]_{n>i} -> [a]_{n=i}
+ , drop -- i:Int -> [a]_{n>i} -> [a]_{n-i}
+ , init -- i:Int -> [a]_{n>i} -> [a]_{n-i}
  , id
  , ifelse
  , keys
@@ -50,7 +56,6 @@ import cppbase
  , vals
  , zip
  , zipWith
- -- combinators
  , seq
  , const
  -- logical
@@ -78,6 +83,12 @@ import rbase
  , sub
  , mul
  , div
+ , head -- [a] -> a
+ , tail -- [a]_{n} -> [a]_{n-1}
+ , last -- [a] -> a
+ , take -- i:Int -> [a]_{n>i} -> [a]_{n=i}
+ , drop -- i:Int -> [a]_{n>i} -> [a]_{n-i}
+ , init -- i:Int -> [a]_{n>i} -> [a]_{n-i}
  , length
  , lengthS
  , fst
@@ -104,7 +115,9 @@ import rbase
 import pybase
  ( run
  , add
+ , append
  , at
+ , ifelse
  , concat
  , div
  , enumerateWith
@@ -115,6 +128,12 @@ import pybase
  , mul
  , onFst
  , shard
+ , head -- [a] -> a
+ , tail -- [a]_{n} -> [a]_{n-1}
+ , last -- [a] -> a
+ , take -- i:Int -> [a]_{n>i} -> [a]_{n=i}
+ , drop -- i:Int -> [a]_{n>i} -> [a]_{n-i}
+ , init -- i:Int -> [a]_{n>i} -> [a]_{n-i}
  , sleep
  , sub
  , keys
