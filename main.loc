@@ -41,6 +41,7 @@ import cppbase
  , init -- i:Int -> [a]_{n>i} -> [a]_{n-i}
  , id
  , ifelse
+ , branch
  , keys
  , length
  , lengthS
@@ -76,6 +77,13 @@ import cppbase
  , paste
  , lines
  , lengthS
+ -- temporary integer arithmetic operators
+ , addI
+ , subI
+ , mulI
+ , divI
+ , modI
+ , negI
  )
 
 
