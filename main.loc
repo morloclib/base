@@ -68,7 +68,16 @@ import cppbase
  , not
  , and
  , or
+ -- string
+ , show
+ , unlines
+ , words
+ , unwords
+ , paste
+ , lines
+ , lengthS
  )
+
 
 import rbase
  ( run
