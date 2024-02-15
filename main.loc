@@ -43,8 +43,7 @@ import cppbase
  , ifelse
  , branch
  , keys
- , length
- , lengthS
+ , size 
  , map
  , mapKey
  , mapVal
@@ -60,12 +59,6 @@ import cppbase
  , seq
  , const
  -- logical
- , gt
- , lt
- , ge
- , le
- , eq
- , ne
  , not
  , and
  , or
@@ -76,14 +69,26 @@ import cppbase
  , unwords
  , paste
  , lines
- , lengthS
- -- temporary integer arithmetic operators
- , addI
- , subI
- , mulI
- , divI
- , modI
- , negI
+ -- Show
+ , show
+ -- Sized
+ , size
+ -- Ord
+ , le
+ , lt
+ , ge
+ , gt
+ -- Eq
+ , eq
+ , ne
+ -- Addable
+ , add
+ , mul
+ , mod
+ , div
+ -- Subtractable
+ , neg
+ , sub
  )
 
 
@@ -96,18 +101,12 @@ import rbase
  , map
  , zipWith
  , join
- , add
- , sub
- , mul
- , div
  , head -- [a] -> a
  , tail -- [a]_{n} -> [a]_{n-1}
  , last -- [a] -> a
  , take -- i:Int -> [a]_{n>i} -> [a]_{n=i}
  , drop -- i:Int -> [a]_{n>i} -> [a]_{n-i}
  , init -- i:Int -> [a]_{n>i} -> [a]_{n-i}
- , length
- , lengthS
  , fst
  , snd
  , fst3
@@ -118,31 +117,43 @@ import rbase
  , seq
  , const
  -- logical
- , gt
- , lt
- , ge
- , le
- , eq
- , ne
  , not
  , and
  , or
+ -- Show
+ , show
+ -- Sized
+ , size
+ -- Ord
+ , le
+ , lt
+ , ge
+ , gt
+ -- Eq
+ , eq
+ , ne
+ -- Addable
+ , add
+ , mul
+ , mod
+ , div
+ -- Subtractable
+ , neg
+ , sub
  )
+
 
 import pybase
  ( run
- , add
  , append
  , at
  , ifelse
  , concat
- , div
  , enumerateWith
  , fold
  , id
  , join
  , map
- , mul
  , onFst
  , shard
  , head -- [a] -> a
@@ -152,14 +163,11 @@ import pybase
  , drop -- i:Int -> [a]_{n>i} -> [a]_{n-i}
  , init -- i:Int -> [a]_{n>i} -> [a]_{n-i}
  , sleep
- , sub
  , keys
  , vals
  , filterKey
  , filterVal
  , zipWith
- , length
- , lengthS
  , readMap
  , fst
  , snd
@@ -171,15 +179,29 @@ import pybase
  , seq
  , const
  -- logical
- , gt
- , lt
- , ge
- , le
- , eq
- , ne
  , not
  , and
  , or
+ -- Show
+ , show
+ -- Sized
+ , size
+ -- Ord
+ , le
+ , lt
+ , ge
+ , gt
+ -- Eq
+ , eq
+ , ne
+ -- Addable
+ , add
+ , mul
+ , mod
+ , div
+ -- Subtractable
+ , neg
+ , sub
  )
 
 withFsts f xs = zip (f (map fst xs)) (map snd xs)
