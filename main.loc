@@ -3,18 +3,6 @@ module base (*)
 -- really need `import *`
 -- also need namespaces and qualified imports
 import conventions
- ( Real
- , Int
- , Str
- , Bool
- , Unit
- , List
- , Map
- , Tuple2
- , Tuple3
- , Tuple4
- , Tuple5
- )
 
 import cppbase
  ( run
