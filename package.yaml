@@ -1,11 +1,11 @@
-name: base
+name: base-all
 version: 0.0.0
-homepage: https://github.com/morloc-lib/base
+homepage: https://github.com/morloc-lib/base-all
 synopsis: Core types across all languages
-description: This is totally experimental
+description: Import implementations for all supported languages
 category: language-base
 license: MIT
 author: "Zebulun Arendsee"
 maintainer: "zbwrnz@gmail.com"
-github: https://github.com/morloc-lib/base
-bug-reports: https://github.com/morloc-lib/base
+github: https://github.com/morloc-lib/base-all
+bug-reports: https://github.com/morloc-lib/base-all
