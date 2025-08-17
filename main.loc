@@ -1,4 +1,4 @@
-module base (*)
+module base-all (*)
 
 import base-cpp
 import base-r
