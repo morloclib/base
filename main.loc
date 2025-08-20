@@ -1,8 +1,8 @@
-module base-all (*)
+module base (*)
 
-import base-cpp
-import base-r
-import base-py
+import cppbase
+import rbase
+import pybase
 
 withFsts f xs = zip (f (map fst xs)) (map snd xs)
 withSnds f xs = zip (map fst xs) (f (map snd xs))
